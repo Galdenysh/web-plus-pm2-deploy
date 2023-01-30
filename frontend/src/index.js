@@ -5,6 +5,10 @@ import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from "react-router-dom";
 
+if (process.env.NODE_ENV !== "production") {
+  console.warn("App in development mode!");
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
