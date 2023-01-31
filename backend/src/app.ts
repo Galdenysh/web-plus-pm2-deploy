@@ -4,16 +4,20 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
 import { errors } from 'celebrate';
-// import cors from 'cors';
+import cors from 'cors';
 import errorHandler from './middlewares/error-handler';
-import { DB_ADDRESS, PORT } from './config';
+import { CORS_URL, DB_ADDRESS, PORT } from './config';
 import routes from './routes';
 
 const app = express();
 mongoose.connect(DB_ADDRESS);
 
-// Только для локальных тестов
-// app.use(cors());
+const corsOptions = {
+  origin: CORS_URL,
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());

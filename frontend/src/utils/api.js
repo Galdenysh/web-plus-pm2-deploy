@@ -1,4 +1,4 @@
-import { backend_url, config } from "./constants";
+import { config } from "./constants";
 
 const getResponse = (res) => {
     return res.ok ? res.json() : Promise.reject(`Ошибка: ${res.status}`);

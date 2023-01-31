@@ -1,5 +1,5 @@
 const prod = {
-  backend_url: 'http://api.galdenysh.nomoredomainsclub.ru',
+  backend_url: 'https://api.galdenysh.nomoredomainsclub.ru',
  };
 
  const dev = {
