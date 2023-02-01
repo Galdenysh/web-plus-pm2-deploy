@@ -21,7 +21,8 @@ Backend [https://api.galdenysh.nomoredomainsclub.ru](https://api.galdenysh.nomor
 - PORT=3001
 - JWT_SECRET=you_jwt_secret
 - DB_ADDRESS=mongodb://127.0.0.1:27017/mestodb
-- CORS_URL=https://galdenysh.nomoredomains.rocks
+- CORS_URL_HTTP=http://galdenysh.nomoredomains.rocks
+- CORS_URL_HTTPS=https://galdenysh.nomoredomains.rocks
 
 Переменные .env.deploy
 - DEPLOY_USER=galdenysh
@@ -53,7 +54,7 @@ pm2 deploy production
 ```
 npm i && pm2 deploy production setup
 ```
-и затем"
+и затем:
 
 ```
 pm2 deploy production
